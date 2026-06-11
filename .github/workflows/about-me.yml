@@ -1,0 +1,11 @@
+name: about me
+on: push
+jobs:
+    me:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print name
+              run: echo "George"
+            - name: print action
+              run: echo "Learning Github actions"
+            
