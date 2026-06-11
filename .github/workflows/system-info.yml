@@ -7,3 +7,5 @@ jobs:
      steps:
         - name: info
           run: uname -a
+        - name: list
+          run: ls
