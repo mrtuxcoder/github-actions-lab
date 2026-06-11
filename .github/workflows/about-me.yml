@@ -5,9 +5,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: print pwd
-              run: echo $pwd
+              run: pwd
             - name: print whoami
-              run: echo $whoami
+              run: whoami
             - name: print date
-              run: echo $date
+              run: date
             
