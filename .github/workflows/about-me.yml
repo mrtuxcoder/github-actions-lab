@@ -4,8 +4,10 @@ jobs:
     me:
         runs-on: ubuntu-latest
         steps:
-            - name: print name
-              run: echo "George"
-            - name: print action
-              run: echo "Learning Github actions"
+            - name: print pwd
+              run: echo $pwd
+            - name: print whoami
+              run: echo $whoami
+            - name: print date
+              run: echo $date
             
