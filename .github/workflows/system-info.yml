@@ -1,0 +1,9 @@
+name: system info
+on: push
+
+jobs: 
+    system:
+     runs-on: ubuntu-latest
+     steps:
+        - name: info
+          run: uname -a
