@@ -1,0 +1,25 @@
+name: Runner Inspector 
+on: workflow_dispatch
+
+jobs: 
+    inspect:
+      runs-on: ubuntu-latest
+      steps:
+        - name: checkout repo
+          run: actions/checkout@v4
+        
+        - name: current user
+          run: whoami
+        
+        - name: os
+          run: uname -a
+
+        - name: disk space
+          run: df -h
+
+        - name: memory
+          run:  free -m
+
+        - name: repo files
+          run: ls -la
+              
