@@ -22,4 +22,7 @@ jobs:
 
         - name: repo files
           run: ls -la
+        
+        - name: node version
+          run: node -v
               
