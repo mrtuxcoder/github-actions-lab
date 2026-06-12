@@ -1,0 +1,10 @@
+name: push test
+on: 
+    push:
+
+jobs: 
+    info:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo "A push happened"
