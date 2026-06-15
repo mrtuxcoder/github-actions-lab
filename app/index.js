@@ -1,1 +1,7 @@
-console.log("Hello from github runner")
+const cowsay = require('cowsay');
+
+console.log(
+    cowsay.say({
+        text: "Hello from CI"
+    })
+)
