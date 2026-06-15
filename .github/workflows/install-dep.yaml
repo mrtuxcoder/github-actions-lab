@@ -1,0 +1,24 @@
+name: Install Dependencies
+on:
+    workflow_dispatch
+jobs:
+    install:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Copy Repo
+              uses: actions/checkout@v4
+
+            - name: install node
+              uses: actions/setup-node@v4
+              with:
+               node-version: 22
+
+            - name: Install packages
+              run: npm install
+              working-directory: app
+              
+            - name: Run Program
+              run: node index.js
+              working-directory: app
+              
