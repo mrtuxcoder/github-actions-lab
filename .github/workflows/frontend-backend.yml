@@ -1,0 +1,12 @@
+name: Front and Back Test
+on:
+    workflow_dispatch:
+jobs:
+    frontend-test:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "running frontend tests"
+    backend-test:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "running backend tests"
