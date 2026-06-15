@@ -1,1 +1,1 @@
-console.log("Gugan learning Github actions")
+console.log("Hello from github runner")
