@@ -1,0 +1,20 @@
+name: Node CI
+on:
+    workflow_dispatch
+jobs:
+   run-node:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@4
+              with:
+                node-version: 22
+
+            - name: show node version
+              run: node -v
+
+            - name: Run App
+              run: node app/index.js
