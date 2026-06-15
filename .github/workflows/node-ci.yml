@@ -16,5 +16,8 @@ jobs:
             - name: show node version
               run: node -v
 
+            - name: show npm version
+              run: npm -v
+
             - name: Run App
               run: node app/index.js
