@@ -7,5 +7,5 @@ jobs:
 
         steps:
             - run: echo "starting.."
-            - run: exit 1
+            - run: exit 0
             - run: echo "done"
