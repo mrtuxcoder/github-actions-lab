@@ -1,0 +1,24 @@
+name: Guidra Pipeline
+on:
+    workflow_dispatch:
+jobs:
+    check:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo "checking code"
+            
+    test:
+        needs: check
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Running tests"
+            - run: exit 1
+
+    build:
+        needs: test
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo "Building app"
+
