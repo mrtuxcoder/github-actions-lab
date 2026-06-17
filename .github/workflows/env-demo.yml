@@ -1,0 +1,14 @@
+name: Environment Demo
+on: 
+    workflow_dispatch
+env:
+    APP_NAME: Guidra
+    VERSION: 1.5
+
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo $APP_NAME
+            - run: echo $VERSION
