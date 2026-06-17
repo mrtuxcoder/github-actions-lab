@@ -1,0 +1,19 @@
+name: Env Task
+on:
+    workflow_dispatch:
+
+env:
+    COURSE: GitHub Actions
+    DAY: 8
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+
+        env:
+            SERVER: Azure
+        steps:
+            - run: echo $COURSE
+            - run: echo $DAY
+            - run: echo "Deploying to $SERVER"
+        
+        
