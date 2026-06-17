@@ -9,6 +9,10 @@ jobs:
     demo:
         runs-on: ubuntu-latest
 
+        env:
+            JOB_NAME: Demo
+
         steps:
             - run: echo $APP_NAME
             - run: echo $VERSION
+            - run: echo $JOB_NAME
