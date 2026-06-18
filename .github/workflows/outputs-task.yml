@@ -12,7 +12,7 @@ jobs:
 
         steps:
           - id: data
-            run: echo "hero=George" >> $GITHUB_OUTPUTS
+            run: echo "hero=George" >> $GITHUB_OUTPUT
 
 
     receiver:
