@@ -1,0 +1,23 @@
+name: Artifact Demo
+on:
+   workflow_dispatch:
+jobs:
+    create-file:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo "hello artifact" > hello.txt
+            - uses: actions/upload-artifact@v4
+              with:
+                name: demo-file
+                path: hello.txt
+
+    read-file:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/download-artifact@v4
+              with:
+                name: demo-file
+
+            - run: cat hello.txt
