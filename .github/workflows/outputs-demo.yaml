@@ -1,0 +1,21 @@
+name: Outputs Demo
+on:
+    workflow_dispatch
+
+jobs:
+    producers:
+        runs-on: ubuntu-latest
+
+        outputs:
+             course: ${{steps.info.outputs.course}}
+
+        steps:
+         - id: info
+           run: echo "course=GITHUB ACTIONS" >> $GITHUB_OUTPUT
+
+    consumers:
+        runs-on: ubuntu-latest
+        needs: producers
+
+        steps:
+            - run: echo "${{ needs.producers.outputs.course}}"
