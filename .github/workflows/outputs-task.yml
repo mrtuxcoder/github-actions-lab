@@ -1,0 +1,23 @@
+name: Output Task
+on:
+    workflow_dispatch
+
+
+jobs:
+    producer:
+        runs-on: ubuntu-latest
+
+        outputs: 
+             NAME: ${{steps.data.outputs.hero}}
+
+        steps:
+          - id: data
+            run: echo "hero=George" >> $GITHUB_OUTPUTS
+
+
+    receiver:
+        needs: producer
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo "${{needs.producer.outputs.NAME}}"
