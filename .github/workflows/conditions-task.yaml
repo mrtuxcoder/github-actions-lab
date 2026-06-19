@@ -6,6 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Build Success"
+            - run: exit 1
     deploy:
         needs: build
         runs-on: ubuntu-latest
