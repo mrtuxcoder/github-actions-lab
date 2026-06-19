@@ -11,5 +11,4 @@ jobs:
         needs: build
         runs-on: ubuntu-latest
         steps:
-            - if: success()
-              run: echo "deploying.."
+              - run: echo "deploying.."
