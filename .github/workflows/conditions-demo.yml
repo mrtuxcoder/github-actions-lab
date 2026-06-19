@@ -1,0 +1,17 @@
+name: Conditions Demo
+on:
+    workflow_dispatch:
+
+jobs:
+    demo:
+      runs-on: ubuntu-latest
+      
+      steps:
+          - run: echo "Always runs"
+
+          - if: true
+            run: echo "condition true"
+
+          - if: false
+            run: echo "condition false"
+            
