@@ -12,6 +12,7 @@ jobs:
               with:
                 node-version: 22
                 cache: npm
+                cache-dependency-path: app/package-lock.json
 
             - run: npm install
               working-directory: app
@@ -31,6 +32,7 @@ jobs:
               with:
                 node-version: 22
                 cache: npm
+                cache-dependency-path: app/package-lock.json
 
             - run: npm install
               working-directory: app
@@ -43,4 +45,3 @@ jobs:
               with:
                 name: build-output
                 path: build/
-
